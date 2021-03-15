@@ -106,7 +106,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../interaction/index.html">Additional Interactivity</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Parallel execution with Numba and OpenMP</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#enabling-parallel-execution-with-openmp">Enabling parallel execution with OpenMP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#usage-guide">Usage Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#numba-usage-guide">Numba Usage Guide</a></li>
 </ul>
 </li>
 </ul>
@@ -253,8 +253,8 @@ Within the TARDIS conda environment do:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="usage-guide">
-<h2>Usage Guide<a class="headerlink" href="#usage-guide" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="numba-usage-guide">
+<h2>Numba Usage Guide<a class="headerlink" href="#numba-usage-guide" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">montecarlo</span></code> section of the Configuration file accepts the parameter <code class="docutils literal notranslate"><span class="pre">nthreads</span></code> which sets the number of
 threads to be used for parallelisation. Setting the value of the parameter between 1 and the environment variable
 <code class="docutils literal notranslate"><span class="pre">NUMBA_NUM_THREADS</span></code> (which is, by default, the number of CPU cores on your system) will automatically invoke Numba
