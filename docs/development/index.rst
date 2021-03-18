@@ -18,6 +18,7 @@ to the Astropy team for designing it.
     code_quality
     documentation_preview
     developer_faq
+    doc-preview-check
 
 TARDIS core team Instructions
 =============================
