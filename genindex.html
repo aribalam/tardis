@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
 
   
   
@@ -97,39 +98,40 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart/quickstart.html">Quickstart for TARDIS</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Using TARDIS</span></p>
+<p><span class="caption-text">Using TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="using/components/index.html">Components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using/interaction/index.html">Additional Interactivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using/parallelisation/index.html">Parallel execution with Numba and OpenMP</a></li>
 </ul>
-<p class="caption"><span class="caption-text">The Physics of TARDIS</span></p>
+<p><span class="caption-text">The Physics of TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="physics/montecarlo/index.html">Monte Carlo Primer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="physics/plasma/index.html">Plasma</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Research with TARDIS</span></p>
+<p><span class="caption-text">Research with TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="research/index.html">Overview</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Team &amp; Credits</span></p>
+<p><span class="caption-text">Team &amp; Credits</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="team_and_governance/index.html">Team and Governance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Credits &amp; Publication Policies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CODE_OF_CONDUCT.html">Code of Conduct</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Contributing to TARDIS</span></p>
+<p><span class="caption-text">Contributing to TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contribution Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development/index.html">Developer Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CHANGELOG.html">Change Log</a></li>
 <li class="toctree-l1"><a class="reference internal" href="roadmap.html">Development Roadmap</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API</span></p>
+<p><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api/modules.html">tardis</a></li>
 </ul>
-<p class="caption"><span class="caption-text">References</span></p>
+<p><span class="caption-text">References</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="zreferences.html">TARDIS Papers and useful References</a></li>
 </ul>
@@ -345,6 +347,8 @@
 </li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.CollIonRateCoeffSeaton.calculate">(tardis.plasma.properties.continuum_processes.CollIonRateCoeffSeaton method)</a>
 </li>
+        <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.CollRecombRateCoeff.calculate">(tardis.plasma.properties.continuum_processes.CollRecombRateCoeff method)</a>
+</li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.CorrPhotoIonRateCoeff.calculate">(tardis.plasma.properties.continuum_processes.CorrPhotoIonRateCoeff method)</a>
 </li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.FreeBoundCoolingRate.calculate">(tardis.plasma.properties.continuum_processes.FreeBoundCoolingRate method)</a>
@@ -360,6 +364,8 @@
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.PhotoIonEstimatorsNormFactor.calculate">(tardis.plasma.properties.continuum_processes.PhotoIonEstimatorsNormFactor static method)</a>
 </li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.PhotoIonRateCoeff.calculate">(tardis.plasma.properties.continuum_processes.PhotoIonRateCoeff method)</a>
+</li>
+        <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.RawCollIonTransProbs.calculate">(tardis.plasma.properties.continuum_processes.RawCollIonTransProbs method)</a>
 </li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.RawCollisionTransProbs.calculate">(tardis.plasma.properties.continuum_processes.RawCollisionTransProbs method)</a>
 </li>
@@ -515,6 +521,8 @@
       <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.CollExcRateCoeff">CollExcRateCoeff (class in tardis.plasma.properties.continuum_processes)</a>
 </li>
       <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.CollIonRateCoeffSeaton">CollIonRateCoeffSeaton (class in tardis.plasma.properties.continuum_processes)</a>
+</li>
+      <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.CollRecombRateCoeff">CollRecombRateCoeff (class in tardis.plasma.properties.continuum_processes)</a>
 </li>
       <li><a href="api/tardis.util.colored_logger.html#tardis.util.colored_logger.ColoredLogger.COLOR_FORMAT">COLOR_FORMAT (tardis.util.colored_logger.ColoredLogger attribute)</a>
 </li>
@@ -893,6 +901,8 @@
 </li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.CollIonRateCoeffSeaton.latex_name">(tardis.plasma.properties.continuum_processes.CollIonRateCoeffSeaton attribute)</a>
 </li>
+        <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.CollRecombRateCoeff.latex_name">(tardis.plasma.properties.continuum_processes.CollRecombRateCoeff attribute)</a>
+</li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.CorrPhotoIonRateCoeff.latex_name">(tardis.plasma.properties.continuum_processes.CorrPhotoIonRateCoeff attribute)</a>
 </li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.FreeBoundCoolingRate.latex_name">(tardis.plasma.properties.continuum_processes.FreeBoundCoolingRate attribute)</a>
@@ -908,6 +918,8 @@
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.PhotoIonRateCoeff.latex_name">(tardis.plasma.properties.continuum_processes.PhotoIonRateCoeff attribute)</a>
 </li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.PhotoIonRateCoeffEstimator.latex_name">(tardis.plasma.properties.continuum_processes.PhotoIonRateCoeffEstimator attribute)</a>
+</li>
+        <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.RawCollIonTransProbs.latex_name">(tardis.plasma.properties.continuum_processes.RawCollIonTransProbs attribute)</a>
 </li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.RawCollisionTransProbs.latex_name">(tardis.plasma.properties.continuum_processes.RawCollisionTransProbs attribute)</a>
 </li>
@@ -1304,6 +1316,8 @@
 </li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.CollIonRateCoeffSeaton.outputs">(tardis.plasma.properties.continuum_processes.CollIonRateCoeffSeaton attribute)</a>
 </li>
+        <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.CollRecombRateCoeff.outputs">(tardis.plasma.properties.continuum_processes.CollRecombRateCoeff attribute)</a>
+</li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.CorrPhotoIonRateCoeff.outputs">(tardis.plasma.properties.continuum_processes.CorrPhotoIonRateCoeff attribute)</a>
 </li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.FreeBoundCoolingRate.outputs">(tardis.plasma.properties.continuum_processes.FreeBoundCoolingRate attribute)</a>
@@ -1321,6 +1335,8 @@
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.PhotoIonRateCoeff.outputs">(tardis.plasma.properties.continuum_processes.PhotoIonRateCoeff attribute)</a>
 </li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.PhotoIonRateCoeffEstimator.outputs">(tardis.plasma.properties.continuum_processes.PhotoIonRateCoeffEstimator attribute)</a>
+</li>
+        <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.RawCollIonTransProbs.outputs">(tardis.plasma.properties.continuum_processes.RawCollIonTransProbs attribute)</a>
 </li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.RawCollisionTransProbs.outputs">(tardis.plasma.properties.continuum_processes.RawCollisionTransProbs attribute)</a>
 </li>
@@ -1550,6 +1566,8 @@
       <li><a href="api/tardis.plasma.properties.ion_population.html#tardis.plasma.properties.ion_population.RadiationFieldCorrection">RadiationFieldCorrection (class in tardis.plasma.properties.ion_population)</a>
 </li>
       <li><a href="api/tardis.model.base.html#tardis.model.base.Radial1DModel.radius">radius() (tardis.model.base.Radial1DModel property)</a>
+</li>
+      <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.RawCollIonTransProbs">RawCollIonTransProbs (class in tardis.plasma.properties.continuum_processes)</a>
 </li>
       <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.RawCollisionTransProbs">RawCollisionTransProbs (class in tardis.plasma.properties.continuum_processes)</a>
 </li>
@@ -2180,6 +2198,8 @@
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.FreeBoundCoolingRate.transition_probabilities_outputs">(tardis.plasma.properties.continuum_processes.FreeBoundCoolingRate attribute)</a>
 </li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.FreeFreeCoolingRate.transition_probabilities_outputs">(tardis.plasma.properties.continuum_processes.FreeFreeCoolingRate attribute)</a>
+</li>
+        <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.RawCollIonTransProbs.transition_probabilities_outputs">(tardis.plasma.properties.continuum_processes.RawCollIonTransProbs attribute)</a>
 </li>
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.RawCollisionTransProbs.transition_probabilities_outputs">(tardis.plasma.properties.continuum_processes.RawCollisionTransProbs attribute)</a>
 </li>

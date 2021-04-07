@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/plot_directive.css" type="text/css" />
 
   
   
@@ -97,39 +98,40 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../quickstart/quickstart.html">Quickstart for TARDIS</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Using TARDIS</span></p>
+<p><span class="caption-text">Using TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../using/components/index.html">Components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../using/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../using/interaction/index.html">Additional Interactivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../using/parallelisation/index.html">Parallel execution with Numba and OpenMP</a></li>
 </ul>
-<p class="caption"><span class="caption-text">The Physics of TARDIS</span></p>
+<p><span class="caption-text">The Physics of TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/montecarlo/index.html">Monte Carlo Primer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/plasma/index.html">Plasma</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Research with TARDIS</span></p>
+<p><span class="caption-text">Research with TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../research/index.html">Overview</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Team &amp; Credits</span></p>
+<p><span class="caption-text">Team &amp; Credits</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../team_and_governance/index.html">Team and Governance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../credits.html">Credits &amp; Publication Policies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Contributing to TARDIS</span></p>
+<p><span class="caption-text">Contributing to TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../CONTRIBUTING.html">Contribution Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../development/index.html">Developer Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../CHANGELOG.html">Change Log</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../roadmap.html">Development Roadmap</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API</span></p>
+<p><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../api/modules.html">tardis</a></li>
 </ul>
-<p class="caption"><span class="caption-text">References</span></p>
+<p><span class="caption-text">References</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../zreferences.html">TARDIS Papers and useful References</a></li>
 </ul>
@@ -278,7 +280,7 @@
 <span class="sd">            index : numerical index;</span>
 <span class="sd">            columns : atomic_number, ion_number, level_number, nu[Hz], x_sect[cm^2]</span>
 
-<span class="sd">    two_photon_data: pandas.DataFrame</span>
+<span class="sd">    two_photon_data : pandas.DataFrame</span>
 <span class="sd">        A DataFrame containing the *two photon decay data* with:</span>
 <span class="sd">            index: atomic_number, ion_number, level_number_lower, level_number_upper</span>
 <span class="sd">            columns: A_ul[1/s], nu0[Hz], alpha, beta, gamma</span>
@@ -297,7 +299,7 @@
 <span class="sd">    symbol2atomic_number : OrderedDict</span>
 <span class="sd">    atomic_number2symbol : OrderedDict</span>
 <span class="sd">    photoionization_data : pandas.DataFrame</span>
-<span class="sd">    two_photon_data: pandas.DataFrame</span>
+<span class="sd">    two_photon_data : pandas.DataFrame</span>
 
 <span class="sd">    Methods</span>
 <span class="sd">    -------</span>
@@ -430,9 +432,7 @@
         <span class="n">levels</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;energy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Quantity</span><span class="p">(</span><span class="n">levels</span><span class="p">[</span><span class="s2">&quot;energy&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="s2">&quot;eV&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">cgs</span>
 
         <span class="c1"># Create a new columns with wavelengths in the CGS units</span>
-        <span class="n">lines</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;wavelength_cm&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Quantity</span><span class="p">(</span>
-            <span class="n">lines</span><span class="p">[</span><span class="s2">&quot;wavelength&quot;</span><span class="p">],</span> <span class="s2">&quot;angstrom&quot;</span>
-        <span class="p">)</span><span class="o">.</span><span class="n">cgs</span>
+        <span class="n">lines</span><span class="p">[</span><span class="s2">&quot;wavelength_cm&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Quantity</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="s2">&quot;wavelength&quot;</span><span class="p">],</span> <span class="s2">&quot;angstrom&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">cgs</span>
 
         <span class="c1"># SET ATTRIBUTES</span>
 

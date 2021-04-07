@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/plot_directive.css" type="text/css" />
 
   
   
@@ -97,39 +98,40 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../quickstart/quickstart.html">Quickstart for TARDIS</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Using TARDIS</span></p>
+<p><span class="caption-text">Using TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../using/components/index.html">Components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../using/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../using/interaction/index.html">Additional Interactivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../using/parallelisation/index.html">Parallel execution with Numba and OpenMP</a></li>
 </ul>
-<p class="caption"><span class="caption-text">The Physics of TARDIS</span></p>
+<p><span class="caption-text">The Physics of TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/montecarlo/index.html">Monte Carlo Primer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/plasma/index.html">Plasma</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Research with TARDIS</span></p>
+<p><span class="caption-text">Research with TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../research/index.html">Overview</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Team &amp; Credits</span></p>
+<p><span class="caption-text">Team &amp; Credits</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../team_and_governance/index.html">Team and Governance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../credits.html">Credits &amp; Publication Policies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Contributing to TARDIS</span></p>
+<p><span class="caption-text">Contributing to TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../CONTRIBUTING.html">Contribution Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../development/index.html">Developer Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../CHANGELOG.html">Change Log</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../roadmap.html">Development Roadmap</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API</span></p>
+<p><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../api/modules.html">tardis</a></li>
 </ul>
-<p class="caption"><span class="caption-text">References</span></p>
+<p><span class="caption-text">References</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../zreferences.html">TARDIS Papers and useful References</a></li>
 </ul>
@@ -321,14 +323,14 @@
 <span class="sd">        Indices where the photoionization data for</span>
 <span class="sd">        a given level starts. Needed for calculation</span>
 <span class="sd">        of recombination rates.</span>
-<span class="sd">    nu_i: pandas.Series, dtype float</span>
+<span class="sd">    nu_i : pandas.Series, dtype float</span>
 <span class="sd">        Threshold frequencies for ionization</span>
-<span class="sd">    energy_i: pandas.Series, dtype float</span>
+<span class="sd">    energy_i : pandas.Series, dtype float</span>
 <span class="sd">        Energies of levels with bound-free transitions. Needed to calculate</span>
 <span class="sd">        for example internal transition probabilities in the macro atom scheme.</span>
-<span class="sd">    photo_ion_index: pandas.MultiIndex, dtype int</span>
+<span class="sd">    photo_ion_index : pandas.MultiIndex, dtype int</span>
 <span class="sd">        Atomic, ion and level numbers for which photoionization data exists.</span>
-<span class="sd">    level2continuum_idx: pandas.Series, dtype int</span>
+<span class="sd">    level2continuum_idx : pandas.Series, dtype int</span>
 <span class="sd">        Maps a level MultiIndex (atomic_number, ion_number, level_number) to</span>
 <span class="sd">        the continuum_idx of the corresponding bound-free continuum (which are</span>
 <span class="sd">        sorted by decreasing frequency).</span>
@@ -409,7 +411,7 @@
 <span class="sd">        alpha, beta, gamma are fit coefficients for the frequency dependent</span>
 <span class="sd">        transition probability A(y) of the two photon decay. See Eq. 2 in</span>
 <span class="sd">        Nussbaumer &amp; Schmutz (1984).</span>
-<span class="sd">    two_photon_idx: pandas.DataFrame, dtype int</span>
+<span class="sd">    two_photon_idx : pandas.DataFrame, dtype int</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="TwoPhotonData.calculate"><a class="viewcode-back" href="../../../../api/tardis.plasma.properties.atomic.html#tardis.plasma.properties.atomic.TwoPhotonData.calculate">[docs]</a>    <span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atomic_data</span><span class="p">,</span> <span class="n">continuum_interaction_species</span><span class="p">):</span>
@@ -712,7 +714,7 @@
 <span class="sd">        ----------</span>
 <span class="sd">        atomic_data : tardis.io.atom_data.AtomData</span>
 <span class="sd">        t_electrons : numpy.ndarray</span>
-<span class="sd">        continuun_interaction_species : pandas.MultiIndex</span>
+<span class="sd">        continuum_interaction_species : pandas.MultiIndex</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
