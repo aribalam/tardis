@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Quickstart for TARDIS &mdash; TARDIS v3.0.dev1</title>
@@ -107,40 +106,40 @@
 </ul>
 </li>
 </ul>
-<p><span class="caption-text">Using TARDIS</span></p>
+<p class="caption"><span class="caption-text">Using TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../using/components/index.html">Components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using/interaction/index.html">Additional Interactivity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using/parallelisation/index.html">Parallel execution with Numba and OpenMP</a></li>
 </ul>
-<p><span class="caption-text">The Physics of TARDIS</span></p>
+<p class="caption"><span class="caption-text">The Physics of TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../physics/montecarlo/index.html">Monte Carlo Primer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/plasma/index.html">Plasma</a></li>
 </ul>
-<p><span class="caption-text">Research with TARDIS</span></p>
+<p class="caption"><span class="caption-text">Research with TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../research/index.html">Overview</a></li>
 </ul>
-<p><span class="caption-text">Team &amp; Credits</span></p>
+<p class="caption"><span class="caption-text">Team &amp; Credits</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../team_and_governance/index.html">Team and Governance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../credits.html">Credits &amp; Publication Policies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
 </ul>
-<p><span class="caption-text">Contributing to TARDIS</span></p>
+<p class="caption"><span class="caption-text">Contributing to TARDIS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contribution Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../development/index.html">Developer Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../CHANGELOG.html">Change Log</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Development Roadmap</a></li>
 </ul>
-<p><span class="caption-text">API</span></p>
+<p class="caption"><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api/modules.html">tardis</a></li>
 </ul>
-<p><span class="caption-text">References</span></p>
+<p class="caption"><span class="caption-text">References</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../zreferences.html">TARDIS Papers and useful References</a></li>
 </ul>
@@ -483,7 +482,7 @@ div.rendered_html tbody tr:hover {
 <p>This notebook is available at
 <a class="reference external" href="https://github.com/tardis-sn/tardis/tree/master/docs/quickstart/quickstart.ipynb">https://github.com/tardis-sn/tardis/tree/master/docs/quickstart/quickstart.ipynb</a>
 —-</p>
-<section id="Quickstart-for-TARDIS">
+<div class="section" id="Quickstart-for-TARDIS">
 <h1>Quickstart for TARDIS<a class="headerlink" href="#Quickstart-for-TARDIS" title="Permalink to this headline">¶</a></h1>
 <p>Every simulation run requires the atomic database (for more info refer to <a class="reference internal" href="../using/components/atomic/atomic_data.html"><span class="doc">atomic data</span></a> ) and a configuration file (more info at <a class="reference internal" href="../using/components/configuration/index.html"><span class="doc">configuration</span></a> ). You can obtain a copy of the atomic database from the (<a class="reference external" href="https://github.com/tardis-sn/tardis-refdata">https://github.com/tardis-sn/tardis-refdata</a>) repository (<code class="docutils literal notranslate"><span class="pre">atom_data</span></code> subfolder). We recommended to use the <code class="docutils literal notranslate"><span class="pre">kurucz_cd23_chianti_H_He.h5</span></code> dataset (which is auto-downloaded in the second cell
 already). The configuration file for this quickstart is <code class="docutils literal notranslate"><span class="pre">tardis_example.yml</span></code>, which can be downloaded <a class="reference external" href="https://raw.githubusercontent.com/tardis-sn/tardis/master/docs/using/components/models/examples/tardis_example.yml">here</a>), though this file is auto-downloaded in the third cell.</p>
@@ -498,7 +497,7 @@ already). The configuration file for this quickstart is <code class="docutils li
 </pre></div>
 </div>
 </div>
-<section id="Downloading-the-atomic-data">
+<div class="section" id="Downloading-the-atomic-data">
 <h2>Downloading the atomic data<a class="headerlink" href="#Downloading-the-atomic-data" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -558,10 +557,10 @@ ASSUMING DEFAULT DATA DIRECTORY /home/runner/Downloads/tardis-data
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "70c8c62fa95c43cba240fb2fd49ba2f2"}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "879bdc9696ae4bb18745f8c3572abf28"}</script></div>
 </div>
-</section>
-<section id="Downloading-the-example-file">
+</div>
+<div class="section" id="Downloading-the-example-file">
 <h2>Downloading the example file<a class="headerlink" href="#Downloading-the-example-file" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -579,11 +578,11 @@ ASSUMING DEFAULT DATA DIRECTORY /home/runner/Downloads/tardis-data
 <div class="highlight"><pre>
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100   980  100   980    0     0  61250      0 --:--:-- --:--:-- --:--:-- 61250
+100   980  100   980    0     0  10208      0 --:--:-- --:--:-- --:--:-- 10208
 </pre></div></div>
 </div>
-</section>
-<section id="Running-the-simulation-(long-output)">
+</div>
+<div class="section" id="Running-the-simulation-(long-output)">
 <h2>Running the simulation (long output)<a class="headerlink" href="#Running-the-simulation-(long-output)" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -2636,7 +2635,7 @@ Running post-merge numba montecarlo (with C close lines)!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[<span class="ansi-bold">tardis.simulation.base</span>][<span class="ansi-white-intense-fg ansi-bold">INFO</span>   ]  Simulation finished in 20 iterations and took 42.29 s (<span class="ansi-bold">base.py</span>:384)
+[<span class="ansi-bold">tardis.simulation.base</span>][<span class="ansi-white-intense-fg ansi-bold">INFO</span>   ]  Simulation finished in 20 iterations and took 53.44 s (<span class="ansi-bold">base.py</span>:384)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2644,11 +2643,11 @@ Running post-merge numba montecarlo (with C close lines)!
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-white-intense-fg ansi-bold">INFO</span>:tardis.simulation.base:Simulation finished in 20 iterations and took 42.29 s
+<span class="ansi-white-intense-fg ansi-bold">INFO</span>:tardis.simulation.base:Simulation finished in 20 iterations and took 53.44 s
 </pre></div></div>
 </div>
-</section>
-<section id="Plotting-the-Spectrum">
+</div>
+<div class="section" id="Plotting-the-Spectrum">
 <h2>Plotting the Spectrum<a class="headerlink" href="#Plotting-the-Spectrum" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -2738,9 +2737,9 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"1907d5a2be654fe1a5a5c7ec67f45b5a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "44723fd7ca294017bb513f98c99afd4e": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "75be1d0ec1774cd6b27a692b512ba5f2": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_1907d5a2be654fe1a5a5c7ec67f45b5a", "max": 73704476.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_44723fd7ca294017bb513f98c99afd4e", "value": 73704476.0}}, "db9807b6db434248b2b809d9f1e987ce": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b1fd5389a3c042819aea21c2658c5744": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "902f0e23454f415ab62a65b1e4366492": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_db9807b6db434248b2b809d9f1e987ce", "placeholder": "\u200b", "style": "IPY_MODEL_b1fd5389a3c042819aea21c2658c5744", "value": "kurucz_cd23_chianti_H_He.h5: "}}, "42ec623412f44538a03a767e4bdba0c6": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "40ac8be20d3842c5a293ea63ec153ac9": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "cbc7f6c0a15e4f5695c7a8ae7a7c2e0f": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_42ec623412f44538a03a767e4bdba0c6", "placeholder": "\u200b", "style": "IPY_MODEL_40ac8be20d3842c5a293ea63ec153ac9", "value": " 73.7M/? [00:00&lt;00:00, 119MB/s]"}}, "c0ed694a37394fb583913df096f3b714": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "70c8c62fa95c43cba240fb2fd49ba2f2": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_902f0e23454f415ab62a65b1e4366492", "IPY_MODEL_75be1d0ec1774cd6b27a692b512ba5f2", "IPY_MODEL_cbc7f6c0a15e4f5695c7a8ae7a7c2e0f"], "layout": "IPY_MODEL_c0ed694a37394fb583913df096f3b714"}}}, "version_major": 2, "version_minor": 0}
-</script></section>
-</section>
+{"state": {"e8a7f29d8258497db11cc6cefa754d93": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a0b3f609a58941feaae9b9932daf556c": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "fab82750618c4bcfb2c84a8aba0c598b": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_e8a7f29d8258497db11cc6cefa754d93", "max": 73704476.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_a0b3f609a58941feaae9b9932daf556c", "value": 73704476.0}}, "6456c978126640b08e7d482dc3f65615": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "c995d482e48147cc8689d5c49d2e6ae4": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "b5026072c94f4b64bcfeae946f797db3": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_6456c978126640b08e7d482dc3f65615", "placeholder": "\u200b", "style": "IPY_MODEL_c995d482e48147cc8689d5c49d2e6ae4", "value": "kurucz_cd23_chianti_H_He.h5: "}}, "39f28866ced942e4810f76496b7c7f29": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "005fa59412014ff2a550b44385c2c092": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "09706342b1d848f782036e15cc73ee4b": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_39f28866ced942e4810f76496b7c7f29", "placeholder": "\u200b", "style": "IPY_MODEL_005fa59412014ff2a550b44385c2c092", "value": " 73.7M/? [00:00&lt;00:00, 94.2MB/s]"}}, "928d6f03d8df4e9dbb709d838064d039": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "879bdc9696ae4bb18745f8c3572abf28": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_b5026072c94f4b64bcfeae946f797db3", "IPY_MODEL_fab82750618c4bcfb2c84a8aba0c598b", "IPY_MODEL_09706342b1d848f782036e15cc73ee4b"], "layout": "IPY_MODEL_928d6f03d8df4e9dbb709d838064d039"}}}, "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
 
 
            </div>
