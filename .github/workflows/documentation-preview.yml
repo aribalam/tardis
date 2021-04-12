@@ -35,10 +35,11 @@ jobs:
         shell: bash -l {0}
         run: python setup.py build_docs
 
-      - name: Extract branch name
-        shell: bash
-        run: echo "${GITHUB_REF_NAME}"
-        id: extract_branch
+      - uses: FranzDiebold/github-env-vars-action@v1.2.0
+
+      - name: Print environment variables
+        run: |
+          echo "GITHUB_REF_NAME=$GITHUB_REF_NAME"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
