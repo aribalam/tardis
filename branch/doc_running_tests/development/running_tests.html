@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Running tests &mdash; TARDIS v3.0.dev3973</title>
+  <title>Running tests &mdash; TARDIS v3.0.dev3981</title>
   
 
   
@@ -74,7 +74,7 @@
             
             
               <div class="version">
-                3.0.dev3973
+                3.0.dev3981
               </div>
             
           
@@ -124,6 +124,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../team_and_governance/index.html">Team and Governance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../credits.html">Credits &amp; Publication Policies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sponsors.html">Sponsors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing to TARDIS</span></p>
 <ul class="current">
@@ -252,7 +253,7 @@
 }
 </style>
 <div class="section" id="running-tests">
-<h1>Running tests<a class="headerlink" href="#running-tests" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>Running tests<a class="headerlink" href="#running-tests" title="Permalink to this headline">¶</a></h1>
 <p>There are two basic categories of tests in TARDIS: 1) the unit
 tests, and 2) the integration tests. Unit tests check the outputs of individual functions,
 while the integration tests check entire runs for different setups of TARDIS.</p>
@@ -265,13 +266,13 @@ every few days on a dedicated server.</p>
 <h2>Running the Unit Tests<a class="headerlink" href="#running-the-unit-tests" title="Permalink to this headline">¶</a></h2>
 <p>This is very straightforward to run on your own machine. For very simple unit
 tests, you can run this with:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt; pytest tardis
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt; python setup.py <span class="nb">test</span>
 </pre></div>
 </div>
 <p>Running the more advanced unit tests requires TARDIS Reference data that can be
 downloaded
 (<a class="reference external" href="https://github.com/tardis-sn/tardis-refdata">tardis_refdata</a>).</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt; pytest tardis --args<span class="o">=</span><span class="s2">&quot;--tardis-refdata=/path/to/tardis-refdata/&quot;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt; python setup.py <span class="nb">test</span> --args<span class="o">=</span><span class="s2">&quot;--tardis-refdata=/path/to/tardis-refdata/&quot;</span>
 </pre></div>
 </div>
 </div>
