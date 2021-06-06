@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>tardis.montecarlo.packet_source module &mdash; TARDIS v3.0.dev3962</title>
+  <title>tardis.montecarlo.packet_source module &mdash; TARDIS v3.0.dev3979</title>
   
 
   
@@ -41,8 +41,8 @@
         <script src="../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "document", "processHtmlClass": "math|output_area"}}</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -76,7 +76,7 @@
             
             
               <div class="version">
-                3.0.dev3962
+                3.0.dev3979
               </div>
             
           
@@ -126,6 +126,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../team_and_governance/index.html">Team and Governance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../credits.html">Credits &amp; Publication Policies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sponsors.html">Sponsors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing to TARDIS</span></p>
 <ul>
@@ -309,7 +310,7 @@ to 1) <span class="math notranslate nohighlight">\(\xi_1, \xi_2, \xi_3, {\rm and
 <dl class="py method">
 <dt class="sig sig-object py" id="tardis.montecarlo.packet_source.BasePacketSource.create_uniform_packet_energies">
 <em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">create_uniform_packet_energies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">no_of_packets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rng</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tardis/montecarlo/packet_source.html#BasePacketSource.create_uniform_packet_energies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tardis.montecarlo.packet_source.BasePacketSource.create_uniform_packet_energies" title="Permalink to this definition">¶</a></dt>
-<dd><p>Uniformly distribute energy in arbitrary units where the ensemble of 
+<dd><p>Uniformly distribute energy in arbitrary units where the ensemble of
 packets has energy of 1.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -352,8 +353,34 @@ according to <span class="math notranslate nohighlight">\(\mu=\sqrt{z}, z \isin 
 part.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="tardis.montecarlo.packet_source.BlackBodySimpleSource.create_packets">
-<span class="sig-name descname"><span class="pre">create_packets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_of_packets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rng</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tardis/montecarlo/packet_source.html#BlackBodySimpleSource.create_packets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tardis.montecarlo.packet_source.BlackBodySimpleSource.create_packets" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">create_packets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_of_packets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tardis/montecarlo/packet_source.html#BlackBodySimpleSource.create_packets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tardis.montecarlo.packet_source.BlackBodySimpleSource.create_packets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate black-body packet properties as arrays</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>T</strong><span class="classifier">float64</span></dt><dd><p>Temperature</p>
+</dd>
+<dt><strong>no_of_packets</strong><span class="classifier">int</span></dt><dd><p>Number of packets</p>
+</dd>
+<dt><strong>rng</strong><span class="classifier">numpy random number generator</span></dt><dd></dd>
+<dt><strong>radius</strong><span class="classifier">float64</span></dt><dd><p>Initial packet radius</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>array</dt><dd><p>Packet radii</p>
+</dd>
+<dt>array</dt><dd><p>Packet frequencies</p>
+</dd>
+<dt>array</dt><dd><p>Packet directions</p>
+</dd>
+<dt>array</dt><dd><p>Packet energies</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Packet Propagation &mdash; TARDIS v3.0.dev3962</title>
+  <title>Packet Propagation &mdash; TARDIS v3.0.dev3979</title>
   
 
   
@@ -41,8 +41,8 @@
         <script src="../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "document", "processHtmlClass": "math|output_area"}}</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -76,7 +76,7 @@
             
             
               <div class="version">
-                3.0.dev3962
+                3.0.dev3979
               </div>
             
           
@@ -150,6 +150,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../team_and_governance/index.html">Team and Governance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../credits.html">Credits &amp; Publication Policies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors.html">Sponsors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing to TARDIS</span></p>
 <ul>
@@ -290,8 +291,8 @@ radial direction)</p>
 random number generator which provides uniformly distributed numbers <span class="math notranslate nohighlight">\(z\)</span>
 on the interval <span class="math notranslate nohighlight">\([0,1]\)</span>. The frequency assignment is more involved than
 selecting an initial propagation direction, since the Planck function has to be
-sampled. TARDIS uses the technique described in <a class="bibtex reference internal" href="../../zreferences.html#carter1975" id="id1">[CarterCashwell75]</a> and
-summarized in <span class="bibtex" id="id2">[Bjorkmann1999]</span> for this purpose.</p>
+sampled. TARDIS uses the technique described in <span id="id1">[<a class="reference internal" href="../../zreferences.html#id17" title="L. L. Carter and E. Cashwell. Particle-transport simulation with the Monte Carlo method. Technical Report, Los Alamos Scientific Laboratory, 1975. URL: http://www.iaea.org/inis/collection/NCLCollectionStore/_Public/07/227/7227109.pdf.">CarterCashwell75</a>]</span> and
+summarized in <span id="id2">[<a class="reference internal" href="../../zreferences.html#id16" title="J. E. Bjorkman and K. Wood. Radiative Equilibrium and Temperature Correction in Monte Carlo Radiation Transfer. Astrophysical Journal, 554:615-623, June 2001. arXiv:astro-ph/0103249, doi:10.1086/321336.">BjorkmanWood01</a>]</span> for this purpose.</p>
 </div>
 <div class="section" id="model-of-supernova-domain">
 <span id="expansion"></span><h2>Model of Supernova Domain<a class="headerlink" href="#model-of-supernova-domain" title="Permalink to this headline">¶</a></h2>
@@ -312,7 +313,7 @@ safely applied, no general relatistic effects which would force photons on
 curved trajectories are included.</p>
 </div>
 <p>In spherical geometry, this propagation process may be illustrated by the
-following sketch (taken from <a class="bibtex reference internal" href="../../zreferences.html#noebauer2014" id="id3">[Noebauer14]</a>):</p>
+following sketch (taken from <span id="id3">[<a class="reference internal" href="../../zreferences.html#id28" title="U. M. Noebauer. A Monte Carlo Approach to Radiation Hydrodynamics in Stellar Outflows. Dissertation, Technische Universität München, München, 2014. URL: http://nbn-resolving.de/urn/resolver.pl?urn:nbn:de:bvb:91-diss-20140731-1219398-0-8.">Noebauer14</a>]</span>):</p>
 <a class="reference internal image-reference" href="../../_images/spherical_symmetry.png"><img alt="../../_images/spherical_symmetry.png" src="../../_images/spherical_symmetry.png" style="width: 500px;" /></a>
 <p>The packet starts the propagation at <span class="math notranslate nohighlight">\(r_i\)</span> along the direction
 <span class="math notranslate nohighlight">\(\mu_i\)</span>. After covering a distance <span class="math notranslate nohighlight">\(l\)</span>, the packet is now located
@@ -408,7 +409,7 @@ a pure local problem.</p>
 <div class="section" id="distance-to-next-event">
 <h3>Distance to Next Event<a class="headerlink" href="#distance-to-next-event" title="Permalink to this headline">¶</a></h3>
 <p>With these assumptions, the accumulation of optical depth along a packet’s trajectory currently proceeds according
-to the following scheme (which was originally introduced by <a class="bibtex reference internal" href="../../zreferences.html#mazzali1993" id="id4">[MazzaliLucy93]</a>):
+to the following scheme (which was originally introduced by <span id="id4">[<a class="reference internal" href="../../zreferences.html#id27" title="P. A. Mazzali and L. B. Lucy. The application of Monte Carlo methods to the synthesis of early-time supernovae spectra. Astronomy and Astrophysics, 279:447-456, November 1993.">MazzaliLucy93</a>]</span>):
 given the current lab-frame frequency of the packet, the distance to the next
 Sobolev point (i.e. to the next line resonance) is calculated as discussed above.
 Until this location, the packet continuously accumulates optical depth due to the possibility of
@@ -416,8 +417,8 @@ electron-scattering. At the Sobolev point, the accumulated optical depth is
 instantaneously incremented by the Sobolev optical depth. Afterwards, the
 procedure is repeated, now with respect to the next transition in the
 frequency-ordered list of all possible atomic line transitions. The point at
-which the accumulated optical depth reaches the randomly generated interaction optical depth <span class="math notranslate nohighlight">\(\tau_\mathrm{interaction}\)</span> determines the type of interaction the packet performs and at which location in the spatial mesh, as shown with the example cases in the sketch below (taken from <a class="bibtex reference internal" href="../../zreferences.html#noebauer2014" id="id5">[Noebauer14]</a>, adapted from
-<a class="bibtex reference internal" href="../../zreferences.html#mazzali1993" id="id6">[MazzaliLucy93]</a>):</p>
+which the accumulated optical depth reaches the randomly generated interaction optical depth <span class="math notranslate nohighlight">\(\tau_\mathrm{interaction}\)</span> determines the type of interaction the packet performs and at which location in the spatial mesh, as shown with the example cases in the sketch below (taken from <span id="id5">[<a class="reference internal" href="../../zreferences.html#id28" title="U. M. Noebauer. A Monte Carlo Approach to Radiation Hydrodynamics in Stellar Outflows. Dissertation, Technische Universität München, München, 2014. URL: http://nbn-resolving.de/urn/resolver.pl?urn:nbn:de:bvb:91-diss-20140731-1219398-0-8.">Noebauer14</a>]</span>, adapted from
+<span id="id6">[<a class="reference internal" href="../../zreferences.html#id27" title="P. A. Mazzali and L. B. Lucy. The application of Monte Carlo methods to the synthesis of early-time supernovae spectra. Astronomy and Astrophysics, 279:447-456, November 1993.">MazzaliLucy93</a>]</span>):</p>
 <a class="reference internal image-reference" href="../../_images/optical_depth_summation.png"><img alt="../../_images/optical_depth_summation.png" src="../../_images/optical_depth_summation.png" style="width: 500px;" /></a>
 <p>Three possible cases are highlighted in the above diagram, with the dotted lines showing the (randomly assigned) optical depth <span class="math notranslate nohighlight">\(\tau_\mathrm{interaction}\)</span> at which the packet interacts. In case I, the interaction optical
 depth value is reached on one of the path segments between successive Sobolev
